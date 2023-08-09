@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=exo-py
+Exec=exo-py
+Icon=io.outlawd.exopy
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

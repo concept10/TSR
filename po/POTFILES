@@ -1,0 +1,6 @@
+data/io.outlawd.exopy.desktop.in
+data/io.outlawd.exopy.appdata.xml.in
+data/io.outlawd.exopy.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
