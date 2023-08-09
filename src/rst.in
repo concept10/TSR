@@ -43,5 +43,5 @@ if __name__ == '__main__':
     resource = Gio.Resource.load(os.path.join(pkgdatadir, 'rst.gresource'))
     resource._register()
 
-    from exo_py import main
+    from rst import main
     sys.exit(main.main(VERSION))

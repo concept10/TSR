@@ -21,9 +21,9 @@
 from gi.repository import Adw
 from gi.repository import Gtk
 
-@Gtk.Template(resource_path='/io/outlawd/exopy/window.ui')
-class ExoPyWindow(Adw.ApplicationWindow):
-    __gtype_name__ = 'ExoPyWindow'
+@Gtk.Template(resource_path='/io/outlawd/rst/window.ui')
+class RSTWindow(Adw.ApplicationWindow):
+    __gtype_name__ = 'RSTWindow'
 
     label = Gtk.Template.Child()
 
