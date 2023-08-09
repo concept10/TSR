@@ -1,6 +1,6 @@
 #!@PYTHON@
 
-# exo-py.in
+# rst.in
 #
 # Copyright 2023 outlaw-marine
 #
@@ -32,15 +32,15 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-locale.bindtextdomain('exo-py', localedir)
-locale.textdomain('exo-py')
-gettext.install('exo-py', localedir)
+locale.bindtextdomain('rst', localedir)
+locale.textdomain('rst')
+gettext.install('rst', localedir)
 
 if __name__ == '__main__':
     import gi
 
     from gi.repository import Gio
-    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'exo-py.gresource'))
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'rst.gresource'))
     resource._register()
 
     from exo_py import main

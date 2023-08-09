@@ -1,6 +1,6 @@
-data/io.outlawd.exopy.desktop.in
-data/io.outlawd.exopy.appdata.xml.in
-data/io.outlawd.exopy.gschema.xml
+data/io.outlawd.rst.desktop.in
+data/io.outlawd.rst.appdata.xml.in
+data/io.outlawd.rst.gschema.xml
 src/main.py
 src/window.py
 src/window.ui

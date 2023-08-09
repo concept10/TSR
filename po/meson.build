@@ -1,1 +1,1 @@
-i18n.gettext('exo-py', preset: 'glib')
+i18n.gettext('rst', preset: 'glib')
