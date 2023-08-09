@@ -1,5 +1,5 @@
-# exo-py
+# rst
 
-## exodus (python interpretation)
+## rst
 
 
