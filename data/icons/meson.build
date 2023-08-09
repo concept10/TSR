@@ -1,4 +1,4 @@
-application_id = 'io.outlawd.exopy'
+application_id = 'io.outlawd.rst'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(
