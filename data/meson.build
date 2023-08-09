@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-        input: 'io.outlawd.exopy.desktop.in',
-       output: 'io.outlawd.exopy.desktop',
+        input: 'io.outlawd.rst.desktop.in',
+       output: 'io.outlawd.rst.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
@@ -13,8 +13,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: 'io.outlawd.exopy.appdata.xml.in',
-       output: 'io.outlawd.exopy.appdata.xml',
+        input: 'io.outlawd.rst.appdata.xml.in',
+       output: 'io.outlawd.rst.appdata.xml',
        po_dir: '../po',
       install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -25,7 +25,7 @@ if appstream_util.found()
   test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
 endif
 
-install_data('io.outlawd.exopy.gschema.xml',
+install_data('io.outlawd.rst.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

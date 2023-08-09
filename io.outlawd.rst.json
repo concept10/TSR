@@ -1,9 +1,9 @@
 {
-    "app-id" : "io.outlawd.exopy",
+    "app-id" : "rst.outlaw.io.oi.dwaltuo.tsr",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "44",
     "sdk" : "org.gnome.Sdk",
-    "command" : "exo-py",
+    "command" : "tsr",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
@@ -24,7 +24,7 @@
     ],
     "modules" : [
         {
-            "name" : "exo-py",
+            "name" : "TSR",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [

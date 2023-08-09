@@ -25,14 +25,14 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import ExoPyWindow
+from .window import RSTWindow
 
 
-class ExoPyApplication(Adw.Application):
+class RSTApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='io.outlawd.exopy',
+        super().__init__(application_id='io.outlawd.rst',
                          flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
@@ -46,18 +46,18 @@ class ExoPyApplication(Adw.Application):
         """
         win = self.props.active_window
         if not win:
-            win = ExoPyWindow(application=self)
+            win = RSTWindow(application=self)
         win.present()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='exo-py',
-                                application_icon='io.outlawd.exopy',
-                                developer_name='outlaw-marine',
+                                application_name='RST',
+                                application_icon='io.outlawd.rst',
+                                developer_name='outlaw-dma',
                                 version='0.1.0',
                                 developers=['outlaw-marine'],
-                                copyright='© 2023 outlaw-marine')
+                                copyright='© 2023 outlaw-dma')
         about.present()
 
     def on_preferences_action(self, widget, _):
@@ -82,5 +82,5 @@ class ExoPyApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
-    app = ExoPyApplication()
+    app = RSTApplication()
     return app.run(sys.argv)
