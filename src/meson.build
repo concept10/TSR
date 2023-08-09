@@ -1,9 +1,9 @@
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'exo_py')
+moduledir = join_paths(pkgdatadir, 'rst')
 gnome = import('gnome')
 
-gnome.compile_resources('exo-py',
-  'exo-py.gresource.xml',
+gnome.compile_resources('rst',
+  'rst.gresource.xml',
   gresource_bundle: true,
   install: true,
   install_dir: pkgdatadir,
@@ -18,18 +18,18 @@ conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 
 configure_file(
-  input: 'exo-py.in',
-  output: 'exo-py',
+  input: 'rst.in',
+  output: 'rst',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir'),
   install_mode: 'r-xr--r--'
 )
 
-exo_py_sources = [
+rst_sources = [
   '__init__.py',
   'main.py',
   'window.py',
 ]
 
-install_data(exo_py_sources, install_dir: moduledir)
+install_data(rst_sources, install_dir: moduledir)
